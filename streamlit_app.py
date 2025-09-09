@@ -14,7 +14,7 @@ import time
 # Define the pages
 main_page = st.Page("main.py", title="Accueil MyHealth")
 page_2 = st.Page("page2.py", title="Pression")
-page_3 = st.Page("page3.py", title="Glysémie")
+page_3 = st.Page("page3.py", title="Glycémie")
 page_4 = st.Page("page4B.py", title="Poids")
 
 # Set up navigation
