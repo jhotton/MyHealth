@@ -32,7 +32,7 @@ try:
     #st.write("### Aperçu des données utilisées pour les graphiques :")
     #st.dataframe(df_synthese.head())
         # Bouton téléchargement
-    with open("synthesed.csv", "rb") as f:
+    with open("synthese.csv", "rb") as f:
         st.download_button(
             label="📥 Télécharger le fichier CSV",
             data=f,
