@@ -133,7 +133,7 @@ try:
     #st.write("### Aperçu des données utilisées pour les graphiques :")
     # Bouton de téléchargement
     csv_glyc_data = df_glycemie.to_csv(index=False).encode('utf-8')
-    st.download_button(label="📥 Télécharger synthese.csv", data=csv_glyc_data,
+    st.download_button(label="📥 Télécharger glycemie.csv", data=csv_glyc_data,
                        file_name='glycemie.csv', mime='text/csv')
     
     # --- Filtrage des données si une date est sélectionnée ---
@@ -192,6 +192,11 @@ try:
     df_poids['Date'] = pd.to_datetime(df_poids['Date'])
     
     st.success("Fichier `poids.csv` chargé avec succès.")
+
+     # Bouton de téléchargement
+    csv_poids_data = df_poids.to_csv(index=False).encode('utf-8')
+    st.download_button(label="📥 Télécharger poids.csv", data=csv_poids_data,
+                       file_name='poids.csv', mime='text/csv')
 
     # --- Filtrage des données si une date est sélectionnée ---
     if date_debut:
