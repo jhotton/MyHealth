@@ -31,7 +31,14 @@ try:
     st.success("Fichier `synthese.csv` chargé avec succès.")
     #st.write("### Aperçu des données utilisées pour les graphiques :")
     #st.dataframe(df_synthese.head())
-    
+        # Bouton téléchargement
+    with open("synthesed.csv", "rb") as f:
+    st.download_button(
+        label="📥 Télécharger le fichier CSV",
+        data=f,
+        file_name="synthese.csv",
+        mime="text/csv"
+    )
    
 
 # --- Filtrage des données si une date est sélectionnée ---
@@ -105,14 +112,6 @@ try:
     # Affichage du second graphique dans l'application Streamlit
     st.plotly_chart(fig_pulse, use_container_width=True)
 
-    # Bouton téléchargement
-    with open("synthesed.csv", "rb") as f:
-    st.download_button(
-        label="📥 Télécharger le fichier CSV",
-        data=f,
-        file_name="synthese.csv",
-        mime="text/csv"
-    )
 
 except FileNotFoundError:
     st.error(
