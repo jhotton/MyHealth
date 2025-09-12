@@ -31,14 +31,11 @@ try:
     st.success("Fichier `synthese.csv` chargé avec succès.")
     #st.write("### Aperçu des données utilisées pour les graphiques :")
     #st.dataframe(df_synthese.head())
-        # Bouton téléchargement
-    with open("synthese.csv", "rb") as f:
-        st.download_button(
-            label="📥 Télécharger le fichier CSV",
-            data=f,
-            file_name="synthese.csv",
-            mime="text/csv"
-        )
+    
+    # Bouton de téléchargement
+    csv_blood-data = df_synthese.to_csv(index=False).encode('utf-8')
+    st.download_button(label="📥 Télécharger synthese.csv", data=csv_blood-data,
+                       file_name='synthese.csv', mime='text/csv')
    
 
 # --- Filtrage des données si une date est sélectionnée ---
@@ -135,7 +132,10 @@ try:
     
     st.success("Fichier `glycemie.csv` chargé avec succès.")
     #st.write("### Aperçu des données utilisées pour les graphiques :")
-
+    # Bouton de téléchargement
+    csv_glyc-data = df_glycemie.to_csv(index=False).encode('utf-8')
+    st.download_button(label="📥 Télécharger synthese.csv", data=csv_glyc-data,
+                       file_name='glycemie.csv', mime='text/csv')
     
     # --- Filtrage des données si une date est sélectionnée ---
     if date_debut:
