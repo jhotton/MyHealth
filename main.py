@@ -79,11 +79,11 @@ try:
     st.plotly_chart(fig_pressure, use_container_width=True)
 
     # Bouton téléchargement
-    with open("blood.csv", "rb") as f:
+    with open("synthesed.csv", "rb") as f:
     st.download_button(
         label="📥 Télécharger le fichier CSV",
         data=f,
-        file_name="blood.csv",
+        file_name="synthese.csv",
         mime="text/csv"
     )
 
