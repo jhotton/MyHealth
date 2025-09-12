@@ -78,6 +78,15 @@ try:
     # Affichage du premier graphique dans l'application Streamlit
     st.plotly_chart(fig_pressure, use_container_width=True)
 
+    # Bouton téléchargement
+    with open("blood.csv", "rb") as f:
+    st.download_button(
+        label="📥 Télécharger le fichier CSV",
+        data=f,
+        file_name="blood.csv",
+        mime="text/csv"
+    )
+
     # ---
 
 
