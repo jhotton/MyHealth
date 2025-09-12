@@ -32,10 +32,7 @@ try:
     #st.write("### Aperçu des données utilisées pour les graphiques :")
     #st.dataframe(df_synthese.head())
     
-    # Bouton de téléchargement
-    csv_blood-data = df_synthese.to_csv(index=False).encode('utf-8')
-    st.download_button(label="📥 Télécharger synthese.csv", data=csv_blood-data,
-                       file_name='synthese.csv', mime='text/csv')
+    
    
 
 # --- Filtrage des données si une date est sélectionnée ---
