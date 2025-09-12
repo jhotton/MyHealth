@@ -10,7 +10,7 @@ st.title("📈 Tableau de Bord Interactif des Données de Santé")
 
  # --- Ajout dans la sidebar ---
 st.sidebar.header("🔍 Filtrage des données")
-date_debut = st.sidebar.date_input("Date de début", value="2024/10/01")
+date_debut = st.sidebar.date_input("Date de début", value=None)
 
 # --- SECTION PRESSION ---
 
