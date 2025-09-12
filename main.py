@@ -31,7 +31,9 @@ try:
     st.success("Fichier `synthese.csv` chargé avec succès.")
     #st.write("### Aperçu des données utilisées pour les graphiques :")
     #st.dataframe(df_synthese.head())
-    
+    csv_data = df_synthese.to_csv(index=False).encode('utf-8')
+    st.download_button(label="📥 Télécharger synthese.csv", data=csv_data,
+                       file_name='synthese.csv', mime='text/csv')
     
    
 
