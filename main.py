@@ -33,12 +33,12 @@ try:
     #st.dataframe(df_synthese.head())
         # Bouton téléchargement
     with open("synthesed.csv", "rb") as f:
-    st.download_button(
-        label="📥 Télécharger le fichier CSV",
-        data=f,
-        file_name="synthese.csv",
-        mime="text/csv"
-    )
+        st.download_button(
+            label="📥 Télécharger le fichier CSV",
+            data=f,
+            file_name="synthese.csv",
+            mime="text/csv"
+        )
    
 
 # --- Filtrage des données si une date est sélectionnée ---
