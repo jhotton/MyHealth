@@ -132,8 +132,8 @@ try:
     st.success("Fichier `glycemie.csv` chargé avec succès.")
     #st.write("### Aperçu des données utilisées pour les graphiques :")
     # Bouton de téléchargement
-    csv_glyc-data = df_glycemie.to_csv(index=False).encode('utf-8')
-    st.download_button(label="📥 Télécharger synthese.csv", data=csv_glyc-data,
+    csv_glyc_data = df_glycemie.to_csv(index=False).encode('utf-8')
+    st.download_button(label="📥 Télécharger synthese.csv", data=csv_glyc_data,
                        file_name='glycemie.csv', mime='text/csv')
     
     # --- Filtrage des données si une date est sélectionnée ---
