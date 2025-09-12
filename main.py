@@ -8,9 +8,10 @@ import statsmodels.api as sm
 st.set_page_config(page_title="Tableau de Bord Interactif", layout="wide")
 st.title("📈 Tableau de Bord Interactif des Données de Santé")
 
- # --- Ajout dans la sidebar ---
+# --- Ajout dans la sidebar ---
 st.sidebar.header("🔍 Filtrage des données")
-date_debut = st.sidebar.date_input("Date de début", value=None)
+#date_debut = st.sidebar.date_input("Date de début", value=None)
+date_debut = st.sidebar.date_input("Date de début", value=datetime.date(2024, 10, 1))
 
 # --- SECTION PRESSION ---
 
